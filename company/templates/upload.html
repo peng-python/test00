@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#<form action="{{ url_for('upload_file') }}" method="post">#}
+{#    <table>#}
+{#        <tr>#}
+{#    <td>#}
+{#    <input type="file" name='file'>#}
+{#    </td>#}
+{#        </tr>#}
+{#    </table>#}
+{#    <button class="btn btn-primary btn-block">提交</button>#}
+{#    <input type = "submit" value = "提交">#}
+{#    </form>#}
+{#<form method="POST" enctype="multipart/form-data">#}
+{#      <input type="file" name="file">#}
+{#      <input type="submit" value="Upload">#}
+{#</form>#}
+{#<form action="{{ url_for('upload_file') }}" enctype='multipart/form-data' method='POST'>#}
+{#         <input type="file" name="file">#}
+{#         <input type="submit" value="上传">#}
+{#</form>#}
+<div style="width: 85%;margin-left: 2%;">
+    ----------------------------------------------------------------------------------
+    {% if ds %}
+        {% for d in ds%}
+          <p> {{ d.picture_name }}---<img src="data:;base64,{{ base64.b64encode(d.picture) }}"/></p>
+        {% endfor %}
+    {% endif %}
+
+</div>
+
+作者：凌绝少爷
+链接：https://www.jianshu.com/p/ce6c85a065c1
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+作者：凌绝少爷
+链接：https://www.jianshu.com/p/ce6c85a065c1
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+</body>
+</html>
